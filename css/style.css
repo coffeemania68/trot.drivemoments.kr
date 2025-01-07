@@ -236,3 +236,80 @@ section h2 {
     color: var(--accent-color);
     font-weight: 500;
 }
+/* 국민판정단 카드 특별 스타일 */
+.judge-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.judge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 20, 147, 0.4);
+}
+
+.judge-card span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.judge-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FFD700;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+/* 모집중 상태 깜빡임 애니메이션 */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 퀵 링크 그리드 수정 */
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* 반응형 수정 */
+@media screen and (max-width: 768px) {
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .judge-card {
+        order: -1; /* 모바일에서 최상단에 배치 */
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .quick-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .judge-card {
+        grid-column: span 2; /* 태블릿에서 전체 너비 사용 */
+    }
+}
