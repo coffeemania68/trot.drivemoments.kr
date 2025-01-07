@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생방송 보기 - K-트로트 방송 허브</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo/site-logo.png" alt="K-트로트 허브">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="live.html" class="active">생방송</a></li>
+                <li><a href="community.html">커뮤니티</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="live-page">
+        <!-- 실시간 방송 섹션 -->
+        <section class="live-header">
+            <h1>생방송 보기</h1>
+            <p class="live-description">한일톱텐쇼, 현역가왕2, 미스터트롯3의 생생한 현장을 실시간으로 만나보세요!</p>
+        </section>
+
+        <!-- 프로그램별 생방송 카드 -->
+        <section class="live-programs">
+            <!-- 한일톱텐쇼 -->
+            <div class="live-card">
+                <div class="program-info">
+                    <h2>한일톱텐쇼</h2>
+                    <p class="broadcast-time">매주 월요일 저녁 8시</p>
+                    <div class="countdown" data-day="1" data-hour="20"></div>
+                </div>
+                <div class="live-actions">
+                    <a href="#" class="live-button" target="_blank">
+                        <span class="live-dot"></span>
+                        생방송 보기
+                    </a>
+                    <a href="#" class="vod-button">다시보기</a>
+                </div>
+            </div>
+
+            <!-- 현역가왕2 -->
+            <div class="live-card">
+                <div class="program-info">
+                    <h2>현역가왕2</h2>
+                    <p class="broadcast-time">매주 화요일 저녁 9시</p>
+                    <div class="countdown" data-day="2" data-hour="21"></div>
+                </div>
+                <div class="live-actions">
+                    <a href="#" class="live-button" target="_blank">
+                        <span class="live-dot"></span>
+                        생방송 보기
+                    </a>
+                    <a href="#" class="vod-button">다시보기</a>
+                </div>
+            </div>
+
+            <!-- 미스터트롯3 -->
+            <div class="live-card">
+                <div class="program-info">
+                    <h2>미스터트롯3</h2>
+                    <p class="broadcast-time">매주 목요일 저녁 10시</p>
+                    <div class="countdown" data-day="4" data-hour="22"></div>
+                </div>
+                <div class="live-actions">
+                    <a href="#" class="live-button" target="_blank">
+                        <span class="live-dot"></span>
+                        생방송 보기
+                    </a>
+                    <a href="#" class="vod-button">다시보기</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 시청 가이드 -->
+        <section class="viewing-guide">
+            <h2>시청 가이드</h2>
+            <div class="guide-container">
+                <div class="guide-item">
+                    <div class="guide-icon">📱</div>
+                    <h3>모바일</h3>
+                    <p>앱 다운로드 후 시청</p>
+                    <a href="#" class="guide-button">앱 다운로드</a>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">💻</div>
+                    <h3>PC</h3>
+                    <p>브라우저에서 바로 시청</p>
+                    <a href="#" class="guide-button">PC 시청하기</a>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">📺</div>
+                    <h3>스마트TV</h3>
+                    <p>TV 앱으로 편하게 시청</p>
+                    <a href="#" class="guide-button">TV 안내</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 공지사항 -->
+        <section class="live-notice">
+            <h2>시청 전 확인하세요</h2>
+            <div class="notice-container">
+                <div class="notice-item">
+                    <h3>⚡ 원활한 시청을 위해</h3>
+                    <ul>
+                        <li>안정적인 인터넷 연결을 확인해주세요.</li>
+                        <li>최신 버전의 브라우저 사용을 권장합니다.</li>
+                        <li>본인인증이 필요할 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 K-트로트 방송 허브</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
