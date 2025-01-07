@@ -85,20 +85,22 @@
                 <div class="countdown mb-6 bg-indigo-600/30 p-2 rounded-lg text-center" data-day="4" data-hour="22">
                     다음 방송까지: <span>00일 00시간 00분</span>
                 </div>
-                <div class="space-y-4">
-                    <a href="live.html" 
-                       class="block w-full py-3 px-4 bg-white text-indigo-600 rounded-lg text-center font-semibold hover:bg-indigo-50 transform hover:-translate-y-1 transition-all">
-                        생방송 보기
-                    </a>
-                    <a href="#" 
-                       class="block w-full py-3 px-4 bg-indigo-800 text-white rounded-lg text-center font-semibold hover:bg-indigo-900 transform hover:rotate-1 transition-all">
-                        투표 준비중
-                    </a>
-                    <a href="https://drivemoments.kr/%eb%af%b8%ec%8a%a4%ed%84%b0%ed%8a%b8%eb%a1%af3-%eb%b0%a9%ec%b2%ad%ea%b0%9d-%eb%aa%a8%ec%a7%91/" 
-                       class="block w-full py-3 px-4 bg-indigo-900 text-white rounded-lg text-center font-semibold hover:bg-indigo-950 transform hover:scale-105 transition-all">
-                        국민판정단 신청
-                    </a>
-                </div>
+                <!-- 미스터트롯3 카드의 투표 부분 -->
+<div class="space-y-4">
+    <a href="live.html" 
+       class="block w-full py-3 px-4 bg-white text-indigo-600 rounded-lg text-center font-semibold hover:bg-indigo-50 transform hover:-translate-y-1 transition-all">
+        생방송 보기
+    </a>
+    <!-- 투표 준비중 버튼 -->
+    <a href="#" 
+       class="block w-full py-3 px-4 bg-indigo-800 text-white rounded-lg text-center font-semibold hover:bg-indigo-900 transform hover:rotate-1 transition-all">
+        투표 준비중
+    </a>
+    <a href="https://drivemoments.kr/%eb%af%b8%ec%8a%a4%ed%84%b0%ed%8a%b8%eb%a1%af3-%eb%b0%a9%ec%b2%ad%ea%b0%9d-%eb%aa%a8%ec%a7%91/" 
+       class="block w-full py-3 px-4 bg-indigo-900 text-white rounded-lg text-center font-semibold hover:bg-indigo-950 transform hover:scale-105 transition-all">
+        국민판정단 신청
+    </a>
+</div>
             </div>
         </div>
 
@@ -149,18 +151,23 @@
                 updateCountdownDisplay(countdown, timeLeft);
             });
 
-            // 현역가왕2 - 특정 날짜
-            document.querySelectorAll('.vote-countdown[data-deadline]').forEach(countdown => {
-                const deadline = new Date(countdown.dataset.deadline);
-                const now = new Date();
-                const timeLeft = deadline - now;
-                
-                if (timeLeft > 0) {
-                    updateCountdownDisplay(countdown, timeLeft);
-                } else {
-                    countdown.innerHTML = "투표 마감";
-                }
-            });
+            // JavaScript 부분에서 현역가왕2 투표 카운트다운 로직 수정
+document.querySelectorAll('.vote-countdown[data-deadline]').forEach(countdown => {
+    const deadline = new Date(countdown.dataset.deadline);
+    const now = new Date();
+    const timeLeft = deadline - now;
+    
+    if (timeLeft > 0) {  // 아직 시간이 남아있음
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        
+        countdown.querySelector('span').textContent = 
+            `${days}일 ${hours}시간 ${minutes}분`;
+    } else {
+        countdown.querySelector('span').textContent = "투표 마감";
+    }
+});
         }
 
         function getNextShowTime(targetDay, targetHour) {
