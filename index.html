@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-트로트 방송 허브</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- 헤더 네비게이션 -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo/site-logo.png" alt="K-트로트 허브">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="live.html">생방송</a></li>
+                <li><a href="community.html">커뮤니티</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <!-- 메인 비주얼 섹션 -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>K-트로트 방송 허브</h1>
+                <p>한일톱텐쇼 • 현역가왕2 • 미스터트롯3</p>
+            </div>
+        </section>
+
+        <!-- 프로그램 카드 섹션 -->
+        <section class="programs-section">
+            <h2>주간 방송 프로그램</h2>
+            <div class="program-grid">
+                <!-- 한일톱텐쇼 카드 -->
+                <div class="program-card">
+                    <img src="images/shows/topten-thumb.jpg" alt="한일톱텐쇼">
+                    <div class="card-content">
+                        <h3>한일톱텐쇼</h3>
+                        <p class="broadcast-time">매주 월요일 저녁 8시</p>
+                        <div class="countdown" data-day="1" data-hour="20"></div>
+                        <div class="button-group">
+                            <a href="shows/topten.html" class="btn detail-btn">상세정보</a>
+                            <a href="#" class="btn vote-btn">투표하기</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 현역가왕2 카드 -->
+                <div class="program-card">
+                    <img src="images/shows/king-thumb.jpg" alt="현역가왕2">
+                    <div class="card-content">
+                        <h3>현역가왕2</h3>
+                        <p class="broadcast-time">매주 화요일 저녁 9시</p>
+                        <div class="countdown" data-day="2" data-hour="21"></div>
+                        <div class="button-group">
+                            <a href="shows/king.html" class="btn detail-btn">상세정보</a>
+                            <a href="#" class="btn vote-btn">투표하기</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 미스터트롯3 카드 -->
+                <div class="program-card">
+                    <img src="images/shows/trot-thumb.jpg" alt="미스터트롯3">
+                    <div class="card-content">
+                        <h3>미스터트롯3</h3>
+                        <p class="broadcast-time">매주 목요일 저녁 10시</p>
+                        <div class="countdown" data-day="4" data-hour="22"></div>
+                        <div class="button-group">
+                            <a href="shows/trot.html" class="btn detail-btn">상세정보</a>
+                            <a href="#" class="btn vote-btn">투표하기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 퀵 링크 섹션 -->
+        <section class="quick-links-section">
+            <h2>바로가기</h2>
+            <div class="quick-links-grid">
+                <a href="live.html" class="quick-link-card">
+                    <img src="images/icons/live-icon.png" alt="생방송">
+                    <span>생방송 보기</span>
+                </a>
+                <a href="community.html" class="quick-link-card">
+                    <img src="images/icons/community-icon.png" alt="커뮤니티">
+                    <span>팬커뮤니티</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="kakao-channel">
+                <a href="#" id="kakao-channel-btn">
+                    카카오채널 친구추가
+                </a>
+            </div>
+            <p>&copy; 2024 K-트로트 방송 허브</p>
+        </div>
+    </footer>
+</body>
+</html>
