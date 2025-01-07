@@ -4,82 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K-트로트 방송 허브</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
-    <header class="bg-white shadow-sm">
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="text-xl font-bold">K-트로트 방송 허브</div>
+            <div class="text-xl font-bold">
+                <a href="index.html">K-트로트 방송 허브</a>
+            </div>
             <ul class="flex space-x-8">
-                <li><a href="index.html" class="hover:text-red-600">홈</a></li>
+                <li><a href="index.html" class="text-red-600">홈</a></li>
                 <li><a href="live.html" class="hover:text-red-600">생방송</a></li>
                 <li><a href="community.html" class="hover:text-red-600">커뮤니티</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-16">
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <!-- 한일톱텐쇼 -->
-            <div class="bg-gradient-to-br from-red-500 to-red-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all">
+            <div class="bg-gradient-to-br from-red-500 to-red-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all shadow-lg">
                 <h3 class="text-2xl font-bold mb-4">한일톱텐쇼</h3>
-                <p class="mb-4">매주 월요일 저녁 8시</p>
-                <div class="countdown mb-6" data-day="1" data-hour="20"></div>
-                <div class="space-y-3">
-                    <a href="https://drivemoments.kr/%ED%98%84%EC%97%AD%EA%B0%80%EC%99%952-%EB%82%A8%EC%9E%90-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0-%ED%8E%B8%EC%84%B1%ED%91%9C-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0-%EC%98%A8/" 
-                       class="block w-full py-2 px-4 bg-white text-red-600 rounded-lg text-center font-semibold hover:bg-red-50 transform hover:-translate-y-1 transition-all">
+                <p class="mb-2">매주 월요일 저녁 8시</p>
+                <div class="countdown mb-6 bg-red-600/30 p-2 rounded-lg text-center" data-day="1" data-hour="20">
+                    다음 방송까지: <span>00일 00시간 00분</span>
+                </div>
+                <div class="space-y-4">
+                    <a href="live.html" 
+                       class="block w-full py-3 px-4 bg-white text-red-600 rounded-lg text-center font-semibold hover:bg-red-50 transform hover:-translate-y-1 transition-all">
                         생방송 보기
                     </a>
-                    <a href="https://m.site.naver.com/1o4iW" 
-                       class="block w-full py-2 px-4 bg-red-800 text-white rounded-lg text-center font-semibold hover:bg-red-900 transform hover:rotate-1 transition-all">
-                        투표하기
-                    </a>
+                    <div>
+                        <div class="vote-countdown text-sm text-white/90 mb-2 bg-red-600/30 p-2 rounded-lg text-center" data-day="0" data-hour="10">
+                            투표마감까지: <span>00일 00시간 00분</span>
+                        </div>
+                        <a href="https://m.site.naver.com/1o4iW" 
+                           class="block w-full py-3 px-4 bg-red-800 text-white rounded-lg text-center font-semibold hover:bg-red-900 transform hover:rotate-1 transition-all">
+                            투표하기
+                        </a>
+                    </div>
                     <a href="#" 
-                       class="block w-full py-2 px-4 bg-red-900 text-white rounded-lg text-center font-semibold hover:bg-red-950 transform hover:scale-105 transition-all">
+                       class="block w-full py-3 px-4 bg-red-900 text-white rounded-lg text-center font-semibold hover:bg-red-950 transform hover:scale-105 transition-all">
                         국민판정단 신청
                     </a>
                 </div>
             </div>
 
             <!-- 현역가왕2 -->
-            <div class="bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all">
+            <div class="bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all shadow-lg">
                 <h3 class="text-2xl font-bold mb-4">현역가왕2</h3>
-                <p class="mb-4">매주 화요일 저녁 9시</p>
-                <div class="countdown mb-6" data-day="2" data-hour="21"></div>
-                <div class="space-y-3">
-                    <a href="https://drivemoments.kr/%ED%98%84%EC%97%AD%EA%B0%80%EC%99%952-%EB%82%A8%EC%9E%90-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0-%ED%8E%B8%EC%84%B1%ED%91%9C-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0-%EC%98%A8/" 
-                       class="block w-full py-2 px-4 bg-white text-purple-600 rounded-lg text-center font-semibold hover:bg-purple-50 transform hover:-translate-y-1 transition-all">
+                <p class="mb-2">매주 화요일 저녁 9시</p>
+                <div class="countdown mb-6 bg-purple-600/30 p-2 rounded-lg text-center" data-day="2" data-hour="21">
+                    다음 방송까지: <span>00일 00시간 00분</span>
+                </div>
+                <div class="space-y-4">
+                    <a href="live.html" 
+                       class="block w-full py-3 px-4 bg-white text-purple-600 rounded-lg text-center font-semibold hover:bg-purple-50 transform hover:-translate-y-1 transition-all">
                         생방송 보기
                     </a>
-                    <a href="https://drivemoments.kr/%ed%98%84%ec%97%ad%ea%b0%80%ec%99%952-%eb%82%a8%ec%9e%90%ed%8e%b8-%eb%b0%a9%ec%86%a1-%ec%9d%bc%ec%a0%95-%ec%b6%9c%ec%97%b0%ec%a7%84-%ed%88%ac%ed%91%9c-%eb%b0%a9%eb%b2%95-%ec%b4%9d%ec%a0%95%eb%a6%ac/" 
-                       class="block w-full py-2 px-4 bg-purple-800 text-white rounded-lg text-center font-semibold hover:bg-purple-900 transform hover:rotate-1 transition-all">
-                        투표하기
-                    </a>
+                    <div>
+                        <div class="vote-countdown text-sm text-white/90 mb-2 bg-purple-600/30 p-2 rounded-lg text-center" data-deadline="2024-02-18T23:59:59">
+                            투표마감까지: <span>00일 00시간 00분</span>
+                        </div>
+                        <a href="https://drivemoments.kr/%ed%98%84%ec%97%ad%ea%b0%80%ec%99%952-%eb%82%a8%ec%9e%90%ed%8e%b8-%eb%b0%a9%ec%86%a1-%ec%9d%bc%ec%a0%95-%ec%b6%9c%ec%97%b0%ec%a7%84-%ed%88%ac%ed%91%9c-%eb%b0%a9%eb%b2%95-%ec%b4%9d%ec%a0%95%eb%a6%ac/" 
+                           class="block w-full py-3 px-4 bg-purple-800 text-white rounded-lg text-center font-semibold hover:bg-purple-900 transform hover:rotate-1 transition-all">
+                            투표하기
+                        </a>
+                    </div>
                     <a href="https://go-to.tistory.com/181" 
-                       class="block w-full py-2 px-4 bg-purple-900 text-white rounded-lg text-center font-semibold hover:bg-purple-950 transform hover:scale-105 transition-all">
+                       class="block w-full py-3 px-4 bg-purple-900 text-white rounded-lg text-center font-semibold hover:bg-purple-950 transform hover:scale-105 transition-all">
                         국민판정단 신청
                     </a>
                 </div>
             </div>
 
             <!-- 미스터트롯3 -->
-            <div class="bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all">
+            <div class="bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all shadow-lg">
                 <h3 class="text-2xl font-bold mb-4">미스터트롯3</h3>
-                <p class="mb-4">매주 목요일 저녁 10시</p>
-                <div class="countdown mb-6" data-day="4" data-hour="22"></div>
-                <div class="space-y-3">
-                    <a href="https://drivemoments.kr/%eb%af%b8%ec%8a%a4%ed%84%b0%ed%8a%b8%eb%a1%af3-%eb%b3%b8%eb%b0%a9%ec%82%ac%ec%88%98-%ed%95%b8%eb%93%9c%ed%8f%b0-%ec%8b%a4%ec%8b%9c%ea%b0%84/" 
-                       class="block w-full py-2 px-4 bg-white text-indigo-600 rounded-lg text-center font-semibold hover:bg-indigo-50 transform hover:-translate-y-1 transition-all">
+                <p class="mb-2">매주 목요일 저녁 10시</p>
+                <div class="countdown mb-6 bg-indigo-600/30 p-2 rounded-lg text-center" data-day="4" data-hour="22">
+                    다음 방송까지: <span>00일 00시간 00분</span>
+                </div>
+                <div class="space-y-4">
+                    <a href="live.html" 
+                       class="block w-full py-3 px-4 bg-white text-indigo-600 rounded-lg text-center font-semibold hover:bg-indigo-50 transform hover:-translate-y-1 transition-all">
                         생방송 보기
                     </a>
                     <a href="#" 
-                       class="block w-full py-2 px-4 bg-indigo-800 text-white rounded-lg text-center font-semibold hover:bg-indigo-900 transform hover:rotate-1 transition-all">
-                        투표하기
+                       class="block w-full py-3 px-4 bg-indigo-800 text-white rounded-lg text-center font-semibold hover:bg-indigo-900 transform hover:rotate-1 transition-all">
+                        투표 준비중
                     </a>
                     <a href="https://drivemoments.kr/%eb%af%b8%ec%8a%a4%ed%84%b0%ed%8a%b8%eb%a1%af3-%eb%b0%a9%ec%b2%ad%ea%b0%9d-%eb%aa%a8%ec%a7%91/" 
-                       class="block w-full py-2 px-4 bg-indigo-900 text-white rounded-lg text-center font-semibold hover:bg-indigo-950 transform hover:scale-105 transition-all">
+                       class="block w-full py-3 px-4 bg-indigo-900 text-white rounded-lg text-center font-semibold hover:bg-indigo-950 transform hover:scale-105 transition-all">
                         국민판정단 신청
                     </a>
                 </div>
@@ -87,7 +103,7 @@
         </div>
 
         <!-- 카카오 채널 섹션 -->
-        <div class="mt-12 bg-yellow-400 rounded-xl p-8 transform hover:scale-105 transition-all">
+        <div class="mt-12 bg-yellow-400 rounded-xl p-8 transform hover:scale-105 transition-all shadow-lg">
             <a href="http://pf.kakao.com/_xixnbtG/107843223" 
                class="block text-center text-gray-900 font-bold text-xl">
                 📱 카카오톡 친구추가하고 소식 받아보기
@@ -100,5 +116,85 @@
             <p>&copy; 2024 K-트로트 방송 허브</p>
         </div>
     </footer>
+
+    <script>
+        // 방송 카운트다운
+        function updateBroadcastCountdowns() {
+            document.querySelectorAll('.countdown[data-day][data-hour]').forEach(countdown => {
+                const targetDay = parseInt(countdown.dataset.day);
+                const targetHour = parseInt(countdown.dataset.hour);
+                
+                const now = new Date();
+                const nextShow = getNextShowTime(targetDay, targetHour);
+                const timeLeft = nextShow - now;
+                
+                updateCountdownDisplay(countdown, timeLeft);
+            });
+        }
+
+        // 투표 카운트다운
+        function updateVoteCountdowns() {
+            // 한일톱텐쇼 - 매주 일요일 10시
+            document.querySelectorAll('.vote-countdown[data-day="0"][data-hour="10"]').forEach(countdown => {
+                const now = new Date();
+                const nextSunday = new Date();
+                nextSunday.setDate(now.getDate() + (7 - now.getDay()));
+                nextSunday.setHours(10, 0, 0, 0);
+                
+                if (now > nextSunday) {
+                    nextSunday.setDate(nextSunday.getDate() + 7);
+                }
+                
+                const timeLeft = nextSunday - now;
+                updateCountdownDisplay(countdown, timeLeft);
+            });
+
+            // 현역가왕2 - 특정 날짜
+            document.querySelectorAll('.vote-countdown[data-deadline]').forEach(countdown => {
+                const deadline = new Date(countdown.dataset.deadline);
+                const now = new Date();
+                const timeLeft = deadline - now;
+                
+                if (timeLeft > 0) {
+                    updateCountdownDisplay(countdown, timeLeft);
+                } else {
+                    countdown.innerHTML = "투표 마감";
+                }
+            });
+        }
+
+        function getNextShowTime(targetDay, targetHour) {
+            const now = new Date();
+            let nextShow = new Date();
+            nextShow.setHours(targetHour, 0, 0, 0);
+            
+            let daysUntilShow = targetDay - now.getDay();
+            if (daysUntilShow < 0 || (daysUntilShow === 0 && now.getHours() >= targetHour)) {
+                daysUntilShow += 7;
+            }
+            
+            nextShow.setDate(nextShow.getDate() + daysUntilShow);
+            return nextShow;
+        }
+
+        function updateCountdownDisplay(element, timeLeft) {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            
+            element.querySelector('span').textContent = 
+                `${days}일 ${hours}시간 ${minutes}분`;
+        }
+
+        // 1분마다 카운트다운 업데이트
+        setInterval(() => {
+            updateBroadcastCountdowns();
+            updateVoteCountdowns();
+        }, 60000);
+
+        // 초기 실행
+        updateBroadcastCountdowns();
+        updateVoteCountdowns();
+    </script>
 </body>
 </html>
