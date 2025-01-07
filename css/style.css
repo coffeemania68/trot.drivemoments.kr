@@ -1218,3 +1218,260 @@ section h2 {
 .live-button:hover .live-dot {
     animation: live-pulse 1.5s infinite;
 }
+/* 커뮤니티 페이지 스타일 */
+.community-page {
+    margin-top: 80px;
+    padding-bottom: 4rem;
+}
+
+/* 커뮤니티 헤더 */
+.community-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.community-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.community-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* 프로그램별 커뮤니티 섹션 */
+.program-communities {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.community-section {
+    margin-bottom: 4rem;
+}
+
+.community-section h2 {
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* 카페 카드 그리드 */
+.cafe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.cafe-card {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cafe-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.cafe-card:hover {
+    transform: translateX(5px);
+}
+
+.cafe-card:hover::before {
+    width: 8px;
+}
+
+.cafe-logo {
+    flex: 0 0 80px;
+    height: 80px;
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cafe-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.cafe-info {
+    flex: 1;
+}
+
+.cafe-info h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.member-count {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.join-text {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.cafe-card:hover .join-text {
+    transform: translateX(5px);
+}
+
+/* SNS 링크 섹션 */
+.social-links {
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+}
+
+.social-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.social-card span {
+    font-weight: 500;
+}
+
+/* 커뮤니티 가이드라인 */
+.community-guidelines {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.guidelines-container {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.guideline-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.guideline-item ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.guideline-item li {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.guideline-item li::before {
+    content: '✓';
+    color: var(--primary-color);
+    position: absolute;
+    left: -1.5rem;
+}
+
+/* SNS 플랫폼별 호버 효과 */
+.instagram:hover {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    color: white;
+}
+
+.youtube:hover {
+    background: #FF0000;
+    color: white;
+}
+
+.twitter:hover {
+    background: #1DA1F2;
+    color: white;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    .community-header h1 {
+        font-size: 2rem;
+    }
+
+    .cafe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cafe-card {
+        padding: 1.5rem;
+    }
+
+    .cafe-logo {
+        flex: 0 0 60px;
+        height: 60px;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 애니메이션 효과 */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.cafe-card:hover .cafe-logo img {
+    animation: pulse 1s infinite;
+}
