@@ -1508,3 +1508,47 @@ img {
     width: auto;
     object-fit: contain;
 }
+/* 카카오 채널 섹션 스타일 */
+.kakao-channel-section {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.kakao-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.kakao-add-button {
+    background: #FEE500;
+    color: #333 !important;
+    padding: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    text-decoration: none !important;
+    font-size: 20px !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.kakao-add-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.kakao-add-button span {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 768px) {
+    .kakao-add-button {
+        font-size: 18px !important;
+        padding: 15px 0;
+    }
+}
