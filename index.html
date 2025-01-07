@@ -6,18 +6,16 @@
     <title>K-트로트 방송 허브</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <!-- 헤더 네비게이션 -->
+    <!-- 헤더 -->
     <header class="main-header">
         <nav class="main-nav">
-           <!-- 로고 -->
-<div class="logo">
-    <a href="index.html">
-        <img src="https://blog.kakaocdn.net/dn/bQrz9Z/btsLG3wpuZ3/4UM1T79H0mOAYwIQTZvMFk/img.png" alt="K-트로트 허브">
-    </a>
-</div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://blog.kakaocdn.net/dn/bQrz9Z/btsLG3wpuZ3/4UM1T79H0mOAYwIQTZvMFk/img.png" alt="K-트로트 허브">
+                </a>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">홈</a></li>
                 <li><a href="live.html">생방송</a></li>
@@ -27,92 +25,85 @@
     </header>
 
     <main>
-        <!-- 메인 비주얼 섹션 -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>K-트로트 방송 허브</h1>
-                <p>한일톱텐쇼 • 현역가왕2 • 미스터트롯3</p>
+        <!-- 프로그램 카드 섹션 -->
+        <section class="programs-section">
+            <!-- 한일톱텐쇼 -->
+            <div class="program-card">
+                <img src="https://blog.kakaocdn.net/dn/saTqu/btsLtbutRRY/rCqqHbJEwfF3mXf2ZmIpTk/img.png" alt="한일톱텐쇼">
+                <div class="card-content">
+                    <h3>한일톱텐쇼</h3>
+                    <p class="broadcast-time">매주 월요일 저녁 8시</p>
+                    <div class="countdown" data-day="1" data-hour="20"></div>
+                    <div class="button-group">
+                        <a href="shows/topten.html" class="btn detail-btn">상세정보</a>
+                        <a href="https://blog.kakaocdn.net/dn/bai0hk/btsLtedEugV/uaKsWmPB7OiOVZOrpkcxwK/img.png" class="btn vote-btn">투표하기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 현역가왕2 -->
+            <div class="program-card">
+                <img src="https://blog.kakaocdn.net/dn/vcgu4/btsLFBHGYX4/dBqfAEn5xI6AfYJCyXfmnk/img.png" alt="현역가왕2">
+                <div class="card-content">
+                    <h3>현역가왕2</h3>
+                    <p class="broadcast-time">매주 화요일 저녁 9시</p>
+                    <div class="countdown" data-day="2" data-hour="21"></div>
+                    <div class="button-group">
+                        <a href="shows/king.html" class="btn detail-btn">상세정보</a>
+                        <a href="#" class="btn vote-btn">투표하기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 미스터트롯3 -->
+            <div class="program-card">
+                <img src="https://drivemoments.kr/wp-content/uploads/2024/10/image-42-768x431.png" alt="미스터트롯3">
+                <div class="card-content">
+                    <h3>미스터트롯3</h3>
+                    <p class="broadcast-time">매주 목요일 저녁 10시</p>
+                    <div class="countdown" data-day="4" data-hour="22"></div>
+                    <div class="button-group">
+                        <a href="shows/trot.html" class="btn detail-btn">상세정보</a>
+                        <a href="https://blog.kakaocdn.net/dn/J2vD3/btsLHsoXbKx/cn3kEok18ywhnlK63yx240/img.png" class="btn vote-btn">투표하기</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 프로그램 카드 섹션 -->
-<section class="programs-section">
-    <!-- 한일톱텐쇼 -->
-    <div class="program-card">
-        <img src="https://t1.daumcdn.net/cafeattach/1ZhYJ/457c0661884323639b4b2972f834cfa8920b8b85" alt="한일톱텐쇼">
-        <div class="card-content">
-            <h3>한일톱텐쇼</h3>
-            <p class="broadcast-time">매주 월요일 저녁 8시</p>
-            <div class="countdown" data-day="1" data-hour="20"></div>
-            <div class="button-group">
-                <a href="shows/topten.html" class="btn detail-btn">상세정보</a>
-                <a href="#" class="btn vote-btn">투표하기</a>
+        <!-- 퀵 링크 섹션 -->
+        <section class="quick-links-section">
+            <h2>바로가기</h2>
+            <div class="quick-links-grid">
+                <a href="https://blog.kakaocdn.net/dn/cfAqHE/btsLHRhGyH6/hW0JY9llC0iDne4hkvd4Gk/img.png" class="quick-link-card">
+                    <img src="https://blog.kakaocdn.net/dn/kUOTS/btsLFBOvA9e/ryd8bFIzRUOMzxIQZW3oK0/img.png" alt="생방송">
+                    <span>생방송 보기</span>
+                </a>
+                
+                <a href="#" class="quick-link-card judge-card">
+                    <img src="https://blog.kakaocdn.net/dn/bQrz9Z/btsLG3wpuZ3/4UM1T79H0mOAYwIQTZvMFk/img.png" alt="국민판정단">
+                    <span>국민판정단 신청하기</span>
+                    <div class="judge-status">모집중</div>
+                </a>
+
+                <a href="community.html" class="quick-link-card">
+                    <div class="icon-community"></div>
+                    <span>팬커뮤니티</span>
+                </a>
             </div>
-        </div>
-    </div>
-
-    <!-- 현역가왕2 -->
-    <div class="program-card">
-        <img src="https://t1.daumcdn.net/cafeattach/1ZhYJ/46aaa3b0b354461911e29b9ed7eb61cfc9e97a35" alt="현역가왕2">
-        <div class="card-content">
-            <h3>현역가왕2</h3>
-            <p class="broadcast-time">매주 화요일 저녁 9시</p>
-            <div class="countdown" data-day="2" data-hour="21"></div>
-            <div class="button-group">
-                <a href="shows/king.html" class="btn detail-btn">상세정보</a>
-                <a href="#" class="btn vote-btn">투표하기</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- 미스터트롯3 -->
-    <div class="program-card">
-        <img src="https://drivemoments.kr/wp-content/uploads/2024/10/image-42-768x431.png" alt="미스터트롯3">
-        <div class="card-content">
-            <h3>미스터트롯3</h3>
-            <p class="broadcast-time">매주 목요일 저녁 10시</p>
-            <div class="countdown" data-day="4" data-hour="22"></div>
-            <div class="button-group">
-                <a href="shows/trot.html" class="btn detail-btn">상세정보</a>
-                <a href="#" class="btn vote-btn">투표하기</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-        <!-- 퀵 링크 섹션 수정 -->
-<section class="quick-links-section">
-    <h2>바로가기</h2>
-    <div class="quick-links-grid">
-        <a href="live.html" class="quick-link-card">
-            <img src="images/icons/live-icon.png" alt="생방송">
-            <span>생방송 보기</span>
-        </a>
-        
-        <!-- 국민판정단 신청하기 카드 추가 -->
-        <a href="#" class="quick-link-card judge-card">
-            <img src="images/icons/judge-icon.png" alt="국민판정단">
-            <span>국민판정단 신청하기</span>
-            <div class="judge-status">모집중</div>
-        </a>
-
-        <a href="community.html" class="quick-link-card">
-            <img src="images/icons/community-icon.png" alt="커뮤니티">
-            <span>팬커뮤니티</span>
-        </a>
-    </div>
-</section>
+        </section>
     </main>
+ <section class="kakao-channel-section">
+        <div class="kakao-container">
+            <a href="http://pf.kakao.com/_xixnbtG/107843223" class="kakao-add-button" target="_blank">
+                <span>📱 카카오톡 친구추가하고 소식 받아보기</span>
+            </a>
+        </div>
+    </section>
 
     <footer class="main-footer">
         <div class="footer-content">
-            <div class="kakao-channel">
-                <a href="#" id="kakao-channel-btn">
-                    카카오채널 친구추가
-                </a>
-            </div>
             <p>&copy; 2024 K-트로트 방송 허브</p>
         </div>
-    </footer>
+      <script src="js/main.js"></script>
 </body>
 </html>
