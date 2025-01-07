@@ -546,3 +546,201 @@ section h2 {
         width: 100%;
     }
 }
+/* 현역가왕2 특별 스타일 */
+.king-header {
+    background: linear-gradient(135deg, #4a0404, #8b0000);  /* 더 진한 레드 계열 */
+    position: relative;
+}
+
+.king-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/shows/crown-pattern.png') repeat;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* 현재 가왕 정보 스타일 */
+.current-king {
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.king-info {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.king-image {
+    flex: 0 0 200px;
+    position: relative;
+}
+
+.king-image::after {
+    content: '👑';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 2rem;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+}
+
+.king-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #ffd700;
+}
+
+.king-details {
+    flex: 1;
+}
+
+.king-details h3 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.reign-count, .win-count {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+/* 도전자 목록 스타일 */
+.challengers {
+    margin-top: 1.5rem;
+}
+
+.challenger-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--background-light);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.challenger-item:hover {
+    transform: translateX(10px);
+    background: linear-gradient(to right, var(--background-light), white);
+}
+
+.challenger-name {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.song-title {
+    color: var(--text-dark);
+    font-style: italic;
+}
+
+/* 역대 가왕 기록 스타일 */
+.king-history {
+    padding: 3rem 2rem;
+    background: var(--background-light);
+}
+
+.history-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.history-item {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    align-items: center;
+    background: var(--white);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.history-item:hover {
+    transform: translateX(5px);
+}
+
+.period {
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.king-name {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.reign-period {
+    color: var(--text-dark);
+    text-align: right;
+}
+
+/* 애니메이션 효과 */
+@keyframes crown-shine {
+    0% { transform: rotate(-15deg) scale(1); }
+    50% { transform: rotate(15deg) scale(1.1); }
+    100% { transform: rotate(-15deg) scale(1); }
+}
+
+.king-image::after {
+    animation: crown-shine 3s infinite;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    .king-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .king-image {
+        flex: 0 0 auto;
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .history-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .reign-period {
+        text-align: center;
+    }
+
+    .challenger-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
+
+/* 태블릿 스타일 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .king-info {
+        padding: 1.5rem;
+    }
+
+    .king-image {
+        flex: 0 0 150px;
+    }
+}
