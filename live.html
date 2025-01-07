@@ -4,127 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>생방송 보기 - K-트로트 방송 허브</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <!-- 헤더 -->
-    <header class="main-header">
-        <nav class="main-nav">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo/site-logo.png" alt="K-트로트 허브">
-                </a>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="text-xl font-bold">
+                <a href="index.html">K-트로트 방송 허브</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">홈</a></li>
-                <li><a href="live.html" class="active">생방송</a></li>
-                <li><a href="community.html">커뮤니티</a></li>
+            <ul class="flex space-x-8">
+                <li><a href="index.html" class="hover:text-red-600">홈</a></li>
+                <li><a href="live.html" class="text-red-600">생방송</a></li>
+                <li><a href="community.html" class="hover:text-red-600">커뮤니티</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="live-page">
-        <!-- 실시간 방송 섹션 -->
-        <section class="live-header">
-            <h1>생방송 보기</h1>
-            <p class="live-description">한일톱텐쇼, 현역가왕2, 미스터트롯3의 생생한 현장을 실시간으로 만나보세요!</p>
-        </section>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- 생방송 헤더 -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">생방송 보기</h1>
+            <p class="text-xl text-gray-600">각 프로그램의 생방송과 다시보기를 시청하실 수 있습니다</p>
+        </div>
 
-        <!-- 프로그램별 생방송 카드 -->
-        <section class="live-programs">
+        <!-- 생방송 카드 섹션 -->
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <!-- 한일톱텐쇼 -->
-            <div class="live-card">
-                <div class="program-info">
-                    <h2>한일톱텐쇼</h2>
-                    <p class="broadcast-time">매주 월요일 저녁 8시</p>
-                    <div class="countdown" data-day="1" data-hour="20"></div>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-red-500 to-red-700 p-6 text-white">
+                    <h2 class="text-2xl font-bold mb-2">한일톱텐쇼</h2>
+                    <p class="text-red-100">매주 월요일 저녁 8시</p>
                 </div>
-                <div class="live-actions">
-                    <a href="#" class="live-button" target="_blank">
-                        <span class="live-dot"></span>
+                <div class="p-6 space-y-4">
+                    <div class="countdown text-center text-lg font-semibold text-red-600" data-day="1" data-hour="20">
+                        다음 방송까지 남은 시간
+                    </div>
+                    <a href="https://drivemoments.kr/%ED%98%84%EC%97%AD%EA%B0%80%EC%99%952-%EB%82%A8%EC%9E%90-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0-%ED%8E%B8%EC%84%B1%ED%91%9C-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0-%EC%98%A8/" 
+                       class="block w-full py-3 px-4 bg-red-600 text-white rounded-lg text-center font-semibold hover:bg-red-700 transform hover:-translate-y-1 transition-all">
                         생방송 보기
                     </a>
-                    <a href="#" class="vod-button">다시보기</a>
+                    <a href="#" 
+                       class="block w-full py-3 px-4 bg-gray-100 text-red-600 rounded-lg text-center font-semibold hover:bg-gray-200 transition-all">
+                        다시보기
+                    </a>
                 </div>
             </div>
 
             <!-- 현역가왕2 -->
-            <div class="live-card">
-                <div class="program-info">
-                    <h2>현역가왕2</h2>
-                    <p class="broadcast-time">매주 화요일 저녁 9시</p>
-                    <div class="countdown" data-day="2" data-hour="21"></div>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-purple-500 to-purple-700 p-6 text-white">
+                    <h2 class="text-2xl font-bold mb-2">현역가왕2</h2>
+                    <p class="text-purple-100">매주 화요일 저녁 9시</p>
                 </div>
-                <div class="live-actions">
-                    <a href="#" class="live-button" target="_blank">
-                        <span class="live-dot"></span>
+                <div class="p-6 space-y-4">
+                    <div class="countdown text-center text-lg font-semibold text-purple-600" data-day="2" data-hour="21">
+                        다음 방송까지 남은 시간
+                    </div>
+                    <a href="https://drivemoments.kr/%ED%98%84%EC%97%AD%EA%B0%80%EC%99%952-%EB%82%A8%EC%9E%90-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0-%ED%8E%B8%EC%84%B1%ED%91%9C-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0-%EC%98%A8/" 
+                       class="block w-full py-3 px-4 bg-purple-600 text-white rounded-lg text-center font-semibold hover:bg-purple-700 transform hover:-translate-y-1 transition-all">
                         생방송 보기
                     </a>
-                    <a href="#" class="vod-button">다시보기</a>
+                    <a href="#" 
+                       class="block w-full py-3 px-4 bg-gray-100 text-purple-600 rounded-lg text-center font-semibold hover:bg-gray-200 transition-all">
+                        다시보기
+                    </a>
                 </div>
             </div>
 
             <!-- 미스터트롯3 -->
-            <div class="live-card">
-                <div class="program-info">
-                    <h2>미스터트롯3</h2>
-                    <p class="broadcast-time">매주 목요일 저녁 10시</p>
-                    <div class="countdown" data-day="4" data-hour="22"></div>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-indigo-500 to-indigo-700 p-6 text-white">
+                    <h2 class="text-2xl font-bold mb-2">미스터트롯3</h2>
+                    <p class="text-indigo-100">매주 목요일 저녁 10시</p>
                 </div>
-                <div class="live-actions">
-                    <a href="#" class="live-button" target="_blank">
-                        <span class="live-dot"></span>
+                <div class="p-6 space-y-4">
+                    <div class="countdown text-center text-lg font-semibold text-indigo-600" data-day="4" data-hour="22">
+                        다음 방송까지 남은 시간
+                    </div>
+                    <a href="https://drivemoments.kr/%eb%af%b8%ec%8a%a4%ed%84%b0%ed%8a%b8%eb%a1%af3-%eb%b3%b8%eb%b0%a9%ec%82%ac%ec%88%98-%ed%95%b8%eb%93%9c%ed%8f%b0-%ec%8b%a4%ec%8b%9c%ea%b0%84/" 
+                       class="block w-full py-3 px-4 bg-indigo-600 text-white rounded-lg text-center font-semibold hover:bg-indigo-700 transform hover:-translate-y-1 transition-all">
                         생방송 보기
                     </a>
-                    <a href="#" class="vod-button">다시보기</a>
+                    <a href="#" 
+                       class="block w-full py-3 px-4 bg-gray-100 text-indigo-600 rounded-lg text-center font-semibold hover:bg-gray-200 transition-all">
+                        다시보기
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- 시청 가이드 -->
-        <section class="viewing-guide">
-            <h2>시청 가이드</h2>
-            <div class="guide-container">
-                <div class="guide-item">
-                    <div class="guide-icon">📱</div>
-                    <h3>모바일</h3>
-                    <p>앱 다운로드 후 시청</p>
-                    <a href="#" class="guide-button">앱 다운로드</a>
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold text-center mb-8">시청 가이드</h2>
+            <div class="grid gap-8 md:grid-cols-3">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-semibold mb-2">모바일</h3>
+                    <p class="text-gray-600 mb-4">스마트폰에서 바로 시청</p>
                 </div>
-                <div class="guide-item">
-                    <div class="guide-icon">💻</div>
-                    <h3>PC</h3>
-                    <p>브라우저에서 바로 시청</p>
-                    <a href="#" class="guide-button">PC 시청하기</a>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="text-xl font-semibold mb-2">PC</h3>
+                    <p class="text-gray-600 mb-4">브라우저에서 바로 시청</p>
                 </div>
-                <div class="guide-item">
-                    <div class="guide-icon">📺</div>
-                    <h3>스마트TV</h3>
-                    <p>TV 앱으로 편하게 시청</p>
-                    <a href="#" class="guide-button">TV 안내</a>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-4xl mb-4">📺</div>
+                    <h3 class="text-xl font-semibold mb-2">스마트TV</h3>
+                    <p class="text-gray-600 mb-4">TV 앱으로 편하게 시청</p>
                 </div>
             </div>
-        </section>
-
-        <!-- 공지사항 -->
-        <section class="live-notice">
-            <h2>시청 전 확인하세요</h2>
-            <div class="notice-container">
-                <div class="notice-item">
-                    <h3>⚡ 원활한 시청을 위해</h3>
-                    <ul>
-                        <li>안정적인 인터넷 연결을 확인해주세요.</li>
-                        <li>최신 버전의 브라우저 사용을 권장합니다.</li>
-                        <li>본인인증이 필요할 수 있습니다.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-content">
+    <footer class="bg-gray-100 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
             <p>&copy; 2024 K-트로트 방송 허브</p>
         </div>
     </footer>
