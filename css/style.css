@@ -744,3 +744,244 @@ section h2 {
         flex: 0 0 150px;
     }
 }
+/* 미스터트롯3 특별 스타일 */
+.trot-header {
+    background: linear-gradient(135deg, #6a0dad, #9932cc);  /* 화려한 퍼플 계열 */
+    position: relative;
+}
+
+.trot-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/shows/sparkle-pattern.png') repeat;
+    opacity: 0.1;
+    animation: sparkle 20s linear infinite;
+    z-index: 1;
+}
+
+@keyframes sparkle {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* 진행 단계 타임라인 */
+.competition-progress {
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+.progress-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.progress-timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #ddd;
+    transform: translateY(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+.timeline-point {
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-item.active .timeline-point {
+    background: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(255,20,147,0.3);
+    animation: pulse-point 2s infinite;
+}
+
+@keyframes pulse-point {
+    0% { box-shadow: 0 0 0 0 rgba(255,20,147,0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(255,20,147,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,20,147,0); }
+}
+
+.timeline-content {
+    text-align: center;
+    padding: 1rem;
+}
+
+.timeline-content h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+/* 참가자 순위 그리드 */
+.contestant-ranking {
+    padding: 4rem 2rem;
+}
+
+.ranking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ranking-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.ranking-card:hover {
+    transform: translateY(-10px);
+}
+
+.rank {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.contestant-info {
+    text-align: center;
+    padding: 1rem;
+}
+
+.contestant-info img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.contestant-info h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.vote-percent {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* 지난 방송 다시보기 */
+.previous-episodes {
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+.episode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.episode-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: transform 0.3s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-5px);
+}
+
+.episode-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.episode-details {
+    padding: 1rem;
+}
+
+.episode-details h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+/* 반응형 조정 */
+@media screen and (max-width: 768px) {
+    .progress-timeline {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .timeline-item {
+        margin-bottom: 3rem;
+    }
+
+    .ranking-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .episode-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+/* 타임라인 레이아웃 */
+@media screen and (min-width: 768px) {
+    .progress-timeline {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .timeline-item {
+        flex: 1;
+    }
+
+    .timeline-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: -50%;
+        width: 100%;
+        height: 4px;
+        background: #ddd;
+        z-index: 1;
+    }
+
+    .timeline-item.active:not(:last-child)::after {
+        background: var(--primary-color);
+    }
+}
