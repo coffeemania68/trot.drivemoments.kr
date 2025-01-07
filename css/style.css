@@ -1475,3 +1475,8 @@ section h2 {
 .cafe-card:hover .cafe-logo img {
     animation: pulse 1s infinite;
 }
+.logo img {
+    width: 200px;
+    height: 50px;
+    object-fit: contain;
+}
