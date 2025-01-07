@@ -985,3 +985,236 @@ section h2 {
         background: var(--primary-color);
     }
 }
+/* 생방송 페이지 스타일 */
+.live-page {
+    margin-top: 80px;
+    padding-bottom: 4rem;
+}
+
+/* 생방송 헤더 */
+.live-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.live-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.live-description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* 생방송 프로그램 카드 */
+.live-programs {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.live-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.live-card:hover {
+    transform: translateY(-5px);
+}
+
+.program-info h2 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.broadcast-time {
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* 생방송 버튼 스타일 */
+.live-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.live-button, .vod-button {
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.live-button {
+    background-color: #FF0000;
+    color: var(--white);
+}
+
+.vod-button {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.live-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--white);
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* 시청 가이드 섹션 */
+.viewing-guide {
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+.guide-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.guide-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.guide-item:hover {
+    transform: translateY(-5px);
+}
+
+.guide-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.guide-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.guide-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.guide-button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* 공지사항 섹션 */
+.live-notice {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.notice-container {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.notice-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.notice-item ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.notice-item li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.notice-item li::before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: -1rem;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    .live-header h1 {
+        font-size: 2rem;
+    }
+
+    .live-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .live-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .live-button, .vod-button {
+        justify-content: center;
+    }
+
+    .guide-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 생방송 상태 표시 애니메이션 */
+@keyframes live-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
+.live-button:hover .live-dot {
+    animation: live-pulse 1.5s infinite;
+}
