@@ -6,104 +6,96 @@
     <title>K-트로트 방송 허브</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <!-- 헤더 -->
-    <header class="main-header">
-        <nav class="main-nav">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://blog.kakaocdn.net/dn/bQrz9Z/btsLG3wpuZ3/4UM1T79H0mOAYwIQTZvMFk/img.png" alt="K-트로트 허브">
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">홈</a></li>
-                <li><a href="live.html">생방송</a></li>
-                <li><a href="community.html">커뮤니티</a></li>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="text-xl font-bold">K-트로트 방송 허브</div>
+            <ul class="flex space-x-8">
+                <li><a href="index.html" class="hover:text-blue-600">홈</a></li>
+                <li><a href="live.html" class="hover:text-blue-600">생방송</a></li>
+                <li><a href="community.html" class="hover:text-blue-600">커뮤니티</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- 프로그램 카드 섹션 -->
-        <section class="programs-section">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <!-- 한일톱텐쇼 -->
-            <div class="program-card">
-                <img src="https://blog.kakaocdn.net/dn/saTqu/btsLtbutRRY/rCqqHbJEwfF3mXf2ZmIpTk/img.png" alt="한일톱텐쇼">
-                <div class="card-content">
-                    <h3>한일톱텐쇼</h3>
-                    <p class="broadcast-time">매주 월요일 저녁 8시</p>
-                    <div class="countdown" data-day="1" data-hour="20"></div>
-                    <div class="button-group">
-                        <a href="shows/topten.html" class="btn detail-btn">상세정보</a>
-                        <a href="https://blog.kakaocdn.net/dn/bai0hk/btsLtedEugV/uaKsWmPB7OiOVZOrpkcxwK/img.png" class="btn vote-btn">투표하기</a>
-                    </div>
+            <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all">
+                <h3 class="text-2xl font-bold mb-4">한일톱텐쇼</h3>
+                <p class="mb-4">매주 월요일 저녁 8시</p>
+                <div class="countdown mb-6" data-day="1" data-hour="20"></div>
+                <div class="space-y-3">
+                    <a href="https://blog.kakaocdn.net/dn/saTqu/btsLtbutRRY/rCqqHbJEwfF3mXf2ZmIpTk/img.png" 
+                       class="block w-full py-2 px-4 bg-white text-blue-600 rounded-lg text-center font-semibold hover:bg-blue-50 transform hover:-translate-y-1 transition-all">
+                        생방송 보기
+                    </a>
+                    <a href="https://blog.kakaocdn.net/dn/bai0hk/btsLtedEugV/uaKsWmPB7OiOVZOrpkcxwK/img.png" 
+                       class="block w-full py-2 px-4 bg-blue-800 text-white rounded-lg text-center font-semibold hover:bg-blue-900 transform hover:rotate-1 transition-all">
+                        투표하기
+                    </a>
                 </div>
             </div>
 
             <!-- 현역가왕2 -->
-            <div class="program-card">
-                <img src="https://blog.kakaocdn.net/dn/vcgu4/btsLFBHGYX4/dBqfAEn5xI6AfYJCyXfmnk/img.png" alt="현역가왕2">
-                <div class="card-content">
-                    <h3>현역가왕2</h3>
-                    <p class="broadcast-time">매주 화요일 저녁 9시</p>
-                    <div class="countdown" data-day="2" data-hour="21"></div>
-                    <div class="button-group">
-                        <a href="shows/king.html" class="btn detail-btn">상세정보</a>
-                        <a href="#" class="btn vote-btn">투표하기</a>
-                    </div>
+            <div class="bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all">
+                <h3 class="text-2xl font-bold mb-4">현역가왕2</h3>
+                <p class="mb-4">매주 화요일 저녁 9시</p>
+                <div class="countdown mb-6" data-day="2" data-hour="21"></div>
+                <div class="space-y-3">
+                    <a href="https://blog.kakaocdn.net/dn/vcgu4/btsLFBHGYX4/dBqfAEn5xI6AfYJCyXfmnk/img.png" 
+                       class="block w-full py-2 px-4 bg-white text-purple-600 rounded-lg text-center font-semibold hover:bg-purple-50 transform hover:-translate-y-1 transition-all">
+                        생방송 보기
+                    </a>
+                    <a href="#" 
+                       class="block w-full py-2 px-4 bg-purple-800 text-white rounded-lg text-center font-semibold hover:bg-purple-900 transform hover:rotate-1 transition-all">
+                        투표하기
+                    </a>
                 </div>
             </div>
 
             <!-- 미스터트롯3 -->
-            <div class="program-card">
-                <img src="https://drivemoments.kr/wp-content/uploads/2024/10/image-42-768x431.png" alt="미스터트롯3">
-                <div class="card-content">
-                    <h3>미스터트롯3</h3>
-                    <p class="broadcast-time">매주 목요일 저녁 10시</p>
-                    <div class="countdown" data-day="4" data-hour="22"></div>
-                    <div class="button-group">
-                        <a href="shows/trot.html" class="btn detail-btn">상세정보</a>
-                        <a href="https://blog.kakaocdn.net/dn/J2vD3/btsLHsoXbKx/cn3kEok18ywhnlK63yx240/img.png" class="btn vote-btn">투표하기</a>
-                    </div>
+            <div class="bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all">
+                <h3 class="text-2xl font-bold mb-4">미스터트롯3</h3>
+                <p class="mb-4">매주 목요일 저녁 10시</p>
+                <div class="countdown mb-6" data-day="4" data-hour="22"></div>
+                <div class="space-y-3">
+                    <a href="https://blog.kakaocdn.net/dn/cfAqHE/btsLHRhGyH6/hW0JY9llC0iDne4hkvd4Gk/img.png" 
+                       class="block w-full py-2 px-4 bg-white text-indigo-600 rounded-lg text-center font-semibold hover:bg-indigo-50 transform hover:-translate-y-1 transition-all">
+                        생방송 보기
+                    </a>
+                    <a href="https://blog.kakaocdn.net/dn/J2vD3/btsLHsoXbKx/cn3kEok18ywhnlK63yx240/img.png" 
+                       class="block w-full py-2 px-4 bg-indigo-800 text-white rounded-lg text-center font-semibold hover:bg-indigo-900 transform hover:rotate-1 transition-all">
+                        투표하기
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- 퀵 링크 섹션 -->
-        <section class="quick-links-section">
-            <h2>바로가기</h2>
-            <div class="quick-links-grid">
-                <a href="https://blog.kakaocdn.net/dn/cfAqHE/btsLHRhGyH6/hW0JY9llC0iDne4hkvd4Gk/img.png" class="quick-link-card">
-                    <img src="https://blog.kakaocdn.net/dn/kUOTS/btsLFBOvA9e/ryd8bFIzRUOMzxIQZW3oK0/img.png" alt="생방송">
-                    <span>생방송 보기</span>
-                </a>
-                
-                <a href="#" class="quick-link-card judge-card">
-                    <img src="https://blog.kakaocdn.net/dn/bQrz9Z/btsLG3wpuZ3/4UM1T79H0mOAYwIQTZvMFk/img.png" alt="국민판정단">
-                    <span>국민판정단 신청하기</span>
-                    <div class="judge-status">모집중</div>
-                </a>
-
-                <a href="community.html" class="quick-link-card">
-                    <div class="icon-community"></div>
-                    <span>팬커뮤니티</span>
-                </a>
-            </div>
-        </section>
-    </main>
- <section class="kakao-channel-section">
-        <div class="kakao-container">
-            <a href="http://pf.kakao.com/_xixnbtG/107843223" class="kakao-add-button" target="_blank">
-                <span>📱 카카오톡 친구추가하고 소식 받아보기</span>
+        <!-- 국민판정단 신청 섹션 -->
+        <div class="mt-12 bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-8 text-white">
+            <h2 class="text-2xl font-bold mb-4">국민판정단 신청하기</h2>
+            <p class="mb-6">함께 만들어가는 K-트로트의 새로운 역사</p>
+            <a href="#" class="inline-block py-3 px-6 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all">
+                신청하기
             </a>
         </div>
-    </section>
 
-    <footer class="main-footer">
-        <div class="footer-content">
+        <!-- 카카오 채널 섹션 -->
+        <div class="mt-12 bg-yellow-400 rounded-xl p-8">
+            <a href="http://pf.kakao.com/_xixnbtG/107843223" 
+               class="block text-center text-gray-900 font-bold text-xl hover:transform hover:scale-105 transition-all">
+                📱 카카오톡 친구추가하고 소식 받아보기
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-gray-100 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
             <p>&copy; 2024 K-트로트 방송 허브</p>
         </div>
-      <script src="js/main.js"></script>
+    </footer>
 </body>
 </html>
