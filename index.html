@@ -16,6 +16,24 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">  
     <script src="https://cdn.tailwindcss.com"></script>
+    <!--인피드 광고 코드1-->
+<script>
+var chInfeed = 0;
+var chInfeedAdSenseShow = 0; // 0 = 인피드광고 적용, 1 = 인피드광고 비적용
+var chInfeedAdSenseInsert = 3; // 인피드광고 적용 개수
+var chInfeedAdSense ='<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-f4+x-42-cj+121"     data-ad-client="ca-pub-7488656479974609"     data-ad-slot="7085112394"></ins>';
+</script>
+<!--인피드 광고 끝-->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('a[target="_blank"]');
+    links.forEach(link => link.removeAttribute('target'));
+});
+</script>
+
+<!-- 오가닉 무효트래픽 방지코드 -->
+<script src="https://cdn.jsdelivr.net/gh/MWanKi/adsense_guard@1.0.1/adsense_guard.js"></script>
 </head>
 <body class="bg-gray-50">
     <header class="bg-white shadow-sm fixed w-full top-0 z-50">
