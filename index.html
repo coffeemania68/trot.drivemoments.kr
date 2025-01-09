@@ -91,11 +91,12 @@ setInterval(() => {
     
 </head>
 
-    <body class="bg-gray-50">
+<body class="bg-gray-50">
+    <!-- Google AdSense 스크립트 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7488656479974609" crossorigin="anonymous"></script>
+
     <!-- 상단 광고 컨테이너 -->
     <div id="ad-container" class="fixed w-full top-0 z-50">
-        <script async src="https://pagead2.googlesyndation.com/pagead/js/adsbygoogle.js?client=ca-pub-7488656479974609" crossorigin="anonymous"></script>
-        <!-- 상단 광고 -->
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-7488656479974609"
@@ -103,11 +104,11 @@ setInterval(() => {
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
         <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
 
-    <header class="bg-white shadow-sm fixed w-full z-50" id="main-header">
+    <header id="main-header" class="bg-white shadow-sm fixed w-full z-40">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="text-xl font-bold">
                 <a href="index.html">K-트로트 방송 허브</a>
@@ -121,21 +122,7 @@ setInterval(() => {
     </header>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="main-content">
-        <!-- 인피드 광고 1 -->
-        <div class="mb-8">
-            <script async src="https://pagead2.googlesyndation.com/pagead/js/adsbygoogle.js?client=ca-pub-7488656479974609" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-format="fluid"
-                 data-ad-layout-key="-f4+x-42-cj+121"
-                 data-ad-client="ca-pub-7488656479974609"
-                 data-ad-slot="7085112394"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">   
             <!-- 한일톱텐쇼 -->
             <div class="bg-gradient-to-br from-red-500 to-red-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all shadow-lg">
                 <h3 class="text-2xl font-bold mb-4">한일톱텐쇼</h3>
