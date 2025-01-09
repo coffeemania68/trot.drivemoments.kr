@@ -230,23 +230,35 @@ setInterval(() => {
             </a>
         </div>
     </main>
-     <script>
-    function adjustLayout() {
-        const adHeight = document.getElementById('ad-container').offsetHeight;
-        const header = document.getElementById('main-header');
-        const mainContent = document.getElementById('main-content');
-        
-        // 헤더 위치 조정
-        header.style.top = adHeight + 'px';
-        
-        // 메인 컨텐츠 여백 조정
-        mainContent.style.marginTop = (adHeight + 64) + 'px'; // 64px는 헤더 높이
+   <script>
+// 광고 레이아웃 조정
+function adjustLayout() {
+    const adContainer = document.getElementById('ad-container');
+    const header = document.getElementById('main-header');
+    const mainContent = document.getElementById('main-content');
+    
+    // 광고가 로드된 후 높이 체크
+    if (adContainer.offsetHeight > 0) {
+        header.style.top = adContainer.offsetHeight + 'px';
+        mainContent.style.marginTop = (adContainer.offsetHeight + 64) + 'px';
+    } else {
+        // 광고가 아직 로드되지 않았거나 차단된 경우
+        header.style.top = '0px';
+        mainContent.style.marginTop = '64px';
     }
+}
 
-    // 페이지 로드 및 리사이즈시 레이아웃 조정
-    window.addEventListener('load', adjustLayout);
-    window.addEventListener('resize', adjustLayout);
-    </script>
+// 광고 로드 완료 시 레이아웃 조정
+window.addEventListener('load', function() {
+    setTimeout(adjustLayout, 1000); // 광고 로드 시간 고려
+});
+
+// 화면 크기 변경 시 레이아웃 조정
+window.addEventListener('resize', adjustLayout);
+
+// 주기적으로 광고 높이 체크
+setInterval(adjustLayout, 2000);
+</script>
 
     <footer class="bg-gray-100 mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
