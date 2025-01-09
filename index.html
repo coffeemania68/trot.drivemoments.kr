@@ -34,11 +34,80 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<!-- 오가닉 무효트래픽 방지코드 -->
-<script src="https://cdn.jsdelivr.net/gh/MWanKi/adsense_guard@1.0.1/adsense_guard.js"></script>
+<!-- 광고 클릭 제한 관리 코드 -->
+<script>
+const AdClickManager = {
+    storageKey: 'adClickCount',
+    maxClicksPerDay: 3, // 하루 최대 클릭 횟수
+    
+    initClickCount: function() {
+        const today = new Date().toDateString();
+        const stored = localStorage.getItem(this.storageKey);
+        
+        if (!stored || JSON.parse(stored).date !== today) {
+            localStorage.setItem(this.storageKey, JSON.stringify({
+                date: today,
+                count: 0
+            }));
+        }
+    },
+    
+    canClick: function() {
+        const stored = JSON.parse(localStorage.getItem(this.storageKey));
+        return stored.count < this.maxClicksPerDay;
+    },
+    
+    incrementClick: function() {
+        const stored = JSON.parse(localStorage.getItem(this.storageKey));
+        stored.count += 1;
+        localStorage.setItem(this.storageKey, JSON.stringify(stored));
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    AdClickManager.initClickCount();
+    
+    // 광고 요소들에 클릭 이벤트 리스너 추가
+    document.querySelectorAll('.adsbygoogle').forEach(ad => {
+        ad.addEventListener('click', function(e) {
+            if (!AdClickManager.canClick()) {
+                e.preventDefault();
+                alert('오늘의 광고 클릭 한도를 초과했습니다. 내일 다시 시도해주세요.');
+                return false;
+            }
+            AdClickManager.incrementClick();
+        });
+    });
+});
+
+// 매일 자정에 클릭 카운트 초기화
+setInterval(() => {
+    const now = new Date();
+    if (now.getHours() === 0 && now.getMinutes() === 0) {
+        AdClickManager.initClickCount();
+    }
+}, 60000); // 1분마다 체크
+</script>
+    
 </head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+
+    <body class="bg-gray-50">
+    <!-- 상단 광고 컨테이너 -->
+    <div id="ad-container" class="fixed w-full top-0 z-50">
+        <script async src="https://pagead2.googlesyndation.com/pagead/js/adsbygoogle.js?client=ca-pub-7488656479974609" crossorigin="anonymous"></script>
+        <!-- 상단 광고 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7488656479974609"
+             data-ad-slot="7085112394"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <header class="bg-white shadow-sm fixed w-full z-50" id="main-header">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="text-xl font-bold">
                 <a href="index.html">K-트로트 방송 허브</a>
@@ -51,7 +120,21 @@ document.addEventListener('DOMContentLoaded', function() {
         </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-16">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="main-content">
+        <!-- 인피드 광고 1 -->
+        <div class="mb-8">
+            <script async src="https://pagead2.googlesyndation.com/pagead/js/adsbygoogle.js?client=ca-pub-7488656479974609" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-f4+x-42-cj+121"
+                 data-ad-client="ca-pub-7488656479974609"
+                 data-ad-slot="7085112394"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <!-- 한일톱텐쇼 -->
             <div class="bg-gradient-to-br from-red-500 to-red-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all shadow-lg">
@@ -147,6 +230,23 @@ document.addEventListener('DOMContentLoaded', function() {
             </a>
         </div>
     </main>
+     <script>
+    function adjustLayout() {
+        const adHeight = document.getElementById('ad-container').offsetHeight;
+        const header = document.getElementById('main-header');
+        const mainContent = document.getElementById('main-content');
+        
+        // 헤더 위치 조정
+        header.style.top = adHeight + 'px';
+        
+        // 메인 컨텐츠 여백 조정
+        mainContent.style.marginTop = (adHeight + 64) + 'px'; // 64px는 헤더 높이
+    }
+
+    // 페이지 로드 및 리사이즈시 레이아웃 조정
+    window.addEventListener('load', adjustLayout);
+    window.addEventListener('resize', adjustLayout);
+    </script>
 
     <footer class="bg-gray-100 mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
